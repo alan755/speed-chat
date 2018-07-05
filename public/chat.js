@@ -14,7 +14,8 @@ button.addEventListener('click', () => {
   message.value = ""  
 })
 
-socket.io('chat', (data) => {
+socket.on('chat', (data) => {
+
       output.innerHTML += '<p><strong>' + data.handle + ': </strong>' + data.message + '</p>'
 }) 
    
